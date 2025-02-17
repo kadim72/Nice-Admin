@@ -1,0 +1,26 @@
+$xs: "(max-width: 575.9px)";
+$sm: "(min-width: 576px)";
+$md: "(min-width: 768px)";
+$lg: "(min-width: 992px)";
+$xl: "(min-width: 1200px)";
+$xxl: "(min-width: 1400px)";
+:root {
+    --time-transition: 0.3s;
+    --time-long: 1s;
+    --c-white-main: #fff;
+    --c-black-main: #1c1d1d;
+    --c-main: #040405;
+    --c-h-main: #717ff5;
+    --c-text-main: #444444;
+    --c-text-blue: #012970;
+    --c-text-link: #4154f1;
+    --c-text-gray: #899bbd;
+    --c-text-se-gray: #212529bf;
+    --c-bg-main: #f6f9ff;
+    --c-green-main: #2eca6a;
+    --c-h-green-main: #e0f8e9;
+    --c-orange-main: #ff771d;
+    --c-h-orange-main: #ffecdf;
+    --c-border: #d9d9d9;
+    --c-overlay: #120f0f87;
+}

@@ -1,0 +1,2 @@
+-1- In The Header Check The Avatar Click Event.
+-2- Fix The Scroll Bar.

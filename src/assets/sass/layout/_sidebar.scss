@@ -1,0 +1,182 @@
+.sidebar {
+    background-color: var(--c-white-main);
+    width: 300px;
+    max-height: calc(100vh - 60px);
+    padding: 10px;
+    box-shadow: 5px 0 15px #e1e1e1;
+    position: fixed;
+    left: -301px; //150
+    top: 60px;
+    z-index: 999;
+    @include prefixer(transition, var(--time-transition));
+    overflow-y: auto;
+    &.show {
+        left: 0;
+    }
+    .sidebar-nav {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        .title-nav {
+            margin: 3px 5px;
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: 12px;
+            color: var(--c-text-gray);
+        }
+        .nav-item {
+            .router {
+                background-color: transparent;
+                width: 100%;
+                padding: 10px 14px;
+                border: none;
+                @include prefixer(border-radius, 4px);
+                display: block;
+                text-align: left;
+                font-weight: 600;
+                font-size: 14px;
+                @include prefixer(transition, var(--time-transition));
+                color: var(--c-text-blue);
+                svg {
+                    margin-right: 5px;
+                    font-size: 15px;
+                    color: var(--c-text-gray);
+                    @include prefixer(transition, var(--time-transition));
+                }
+                &.inner-router {
+                    svg {
+                        font-size: 8px;
+                    }
+                }
+                &:hover,
+                &.router-link-active {
+                    background-color: var(--c-bg-main);
+                    color: var(--c-text-link);
+                    svg {
+                        color: var(--c-text-link);
+                    }
+                    &.inner-router {
+                        background-color: transparent;
+                    }
+                }
+            }
+            .link-container {
+                display: flex;
+                margin-bottom: 3px;
+                .arrow {
+                    margin-left: auto;
+                    @include prefixer(transition, var(--time-transition));
+                }
+                & + ul {
+                    max-height: 0;
+                    @include prefixer(transition, var(--time-long) max-height);
+                    overflow: hidden;
+                }
+                &.active {
+                    background-color: var(--c-bg-main);
+                    color: var(--c-text-link);
+                    svg {
+                        color: var(--c-text-link);
+                    }
+                    .arrow {
+                        @include prefixer(transform, rotate(180deg));
+                    }
+                    & + ul {
+                        max-height: 100vh;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.side-bar-main {
+    background-color: var(--c-white-main);
+    width: fit-content;
+    padding: 20px;
+    position: fixed;
+    top: 60px;
+    left: -335px;
+    z-index: 999;
+    @include prefixer(transition, var(--time-transition));
+    overflow-y: scroll;
+    &.show {
+        left: 0;
+    }
+    .title-nav {
+        font-weight: 600;
+        font-size: 12px;
+        color: var(--c-text-gray);
+    }
+    .links {
+        margin-bottom: 5px;
+        padding: 8px 8px 8px 12px;
+        @include prefixer(border-radius, 6px);
+        display: block;
+        font-weight: 600;
+        font-size: 16px;
+        @include prefixer(transition, var(--time-transition));
+        color: var(--c-text-blue);
+        cursor: pointer;
+        &:hover,
+        &.router-link-active {
+            background-color: var(--c-bg-main);
+            color: var(--c-text-link);
+            > svg {
+                color: var(--c-text-link);
+            }
+        }
+        &.active {
+            .arrow {
+                @include prefixer(transform, rotate(180deg));
+            }
+        }
+        svg {
+            margin-right: 10px;
+            color: #d1d1d1;
+            @include prefixer(transition, var(--time-transition));
+        }
+        &.links-container {
+            display: flex;
+            align-items: center;
+            min-width: 280px;
+            &.active {
+                background-color: var(--c-bg-main);
+                color: var(--c-text-link);
+                > svg {
+                    color: var(--c-text-link);
+                }
+            }
+            .arrow {
+                display: block;
+                margin-left: auto;
+            }
+            &.active + ul {
+                max-height: 100vh;
+            }
+        }
+    }
+    ul {
+        max-height: 0;
+        margin-top: 5px;
+        padding-left: 35px;
+        @include prefixer(transition, var(--time-long));
+        overflow: hidden;
+        li {
+            .links {
+                padding: 0;
+                display: flex;
+                align-items: center;
+                font-size: 14px;
+                &:hover,
+                &.router-link-active {
+                    background-color: transparent;
+                }
+                svg {
+                    margin-right: 5px;
+                    font-size: 6px;
+                }
+            }
+        }
+    }
+}

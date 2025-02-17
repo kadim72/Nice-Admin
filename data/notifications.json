@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "title": "Lorem Ipsum",
+        "body": "Quae dolorem earum veritatis oditseno 30 min. ago",
+        "sympol": "exclamation"
+    },
+    {
+        "id": 2,
+        "title": "Atque Rerum Nesciunt",
+        "body": "Quae dolorem earum veritatis oditseno 1hr. ago",
+        "sympol": "x"
+    },
+    {
+        "id": 3,
+        "title": "Sit Rerum Fuga",
+        "body": "Quae dolorem earum veritatis oditseno 2hr. ago",
+        "sympol": "check"
+    },
+    {
+        "id": 4,
+        "title": "Dicta Reprehenerit",
+        "body": "Quae dolorem earum veritatis oditseno 4hr. ago",
+        "sympol": "question"
+    }
+]
